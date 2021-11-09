@@ -1,0 +1,78 @@
+<mat-sidenav-container class="price-conditions">
+  <mat-sidenav position="end">End</mat-sidenav>
+  <section>Main</section>
+  <h1>PRICE TING</h1>
+
+  <h1>Categories</h1>
+  <input type="checkbox" name="" id="" />
+
+  <div class="price-range">
+    <span class="currency-label">
+      <span class="currency-symbol">£</span>
+    </span>
+    <div class="p-range">
+      <span class="t-price-range">
+        <input type="text" name="" id="" />
+      </span>
+    </div>
+  </div>
+  <div style="border: 2px solid red; height: 50px; width: 50px"></div>
+
+  <mat-accordion class="example-headers-align" multi>
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title> Categories</mat-panel-title>
+        <mat-panel-description>
+          <form
+            novalidate
+            (ngSubmit)="save()"
+            [formGroup]="categoryCheckbox"
+            action=""
+          >
+            <div class="form-group"></div>
+          </form>
+          <mat-icon>open_in_full</mat-icon>
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+    </mat-expansion-panel>
+
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title> Prices</mat-panel-title>
+        <mat-panel-description>
+          <form
+            novalidate
+            (ngSubmit)="save()"
+            [formGroup]="priceForm"
+            action=""
+          >
+            <div class="form-group" formGroupName="priceRange">
+              <input type="text" formControlName="low" />
+              <input type="text" formControlName="high" />
+            </div>
+          </form>
+          <mat-icon>open_in_full</mat-icon>
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+    </mat-expansion-panel>
+
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title> Rating</mat-panel-title>
+        <mat-panel-description>
+          <mat-slider
+            thumbLabel
+            [displayWith]="formatLabel"
+            tickInterval="1000"
+            step="1000"
+            min="0"
+            max="100000"
+            aria-label="units"
+          ></mat-slider>
+
+          <mat-icon>open_in_full</mat-icon>
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+    </mat-expansion-panel>
+  </mat-accordion>
+</mat-sidenav-container>

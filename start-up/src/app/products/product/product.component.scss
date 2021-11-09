@@ -1,0 +1,28 @@
+mat-sidenav-container.price-conditions {
+  width: 250px;
+  height: 100%;
+
+}
+
+.price-range {
+  position:relative;
+  .currency-label {
+    box-sizing: content-box;
+    width: 12px;
+    padding-left: 2px;
+  }
+
+  .currency-symbol {
+    position: absolute;
+    top: 23px;
+    left: 5px;
+  }
+
+  .p-range{
+    width: 80px;
+  }
+}
+// .currency-label::after {
+//   content: '£';
+
+// }

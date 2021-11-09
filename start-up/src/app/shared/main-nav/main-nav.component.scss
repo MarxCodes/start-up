@@ -1,0 +1,66 @@
+.nav-container {
+  width: 100%;
+  // border: 2px solid red;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+mat-toolbar.mat-toolbar {
+  // background-color: blue;
+  background-color: transparent;
+
+  position: fixed;
+  /* Make sure the toolbar will stay on top of the content as it scrolls past. */
+  z-index: 2;
+  padding: 0 5%;
+
+  .logo {
+    // background: center cover url('../../../assets/1x/w-logo.png');
+    height: 45px;
+    width: 50px;
+    background-image: url("../../../assets/1x/w-logo.png");
+    background-position: center;
+    background-size: cover;
+    color: white;
+
+  }
+  span {
+    // flex: 0 auto;
+    flex: 1 1 auto;
+  }
+
+  ul {
+    list-style: none;
+  }
+  ul li {
+    // color: #ffffff;
+    color: #b2bec3;
+    // font-family: 'Bebas Neue', cursive;
+    font-family: 'Playfair Display', serif
+  }
+}
+
+mat-sidenav-container {
+  background-color: transparent;
+
+}
+
+// .mat-drawer-container {
+//   background-color: transparent;
+
+// }
+
+.sidenav-container {
+  flex: 1;
+
+}
+
+.is-mobile .sidenav-container {
+  flex: 1 0 auto;
+
+}
